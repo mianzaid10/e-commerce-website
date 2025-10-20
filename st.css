@@ -1,0 +1,457 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.c1{
+   width: 100%;
+    position: sticky;
+    top: 0;
+    /* margin-top: 0px; */
+    /* left: 0; */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 70px;
+}
+.c2{
+    display: flex;
+    justify-content: space-between; /* Is se links left aur right par jayenge */
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+    
+}
+.c3{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.c3 a{
+     font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.c4{
+     list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+.c4 li{
+     margin-left: 20px;
+}
+.c4 a:hover{
+    color: #000;
+}
+.c4 a{
+    text-decoration: none;
+    font-size: 30px;
+    color: gray;
+}
+.p1{
+    position: relative;
+  
+   overflow: hidden;
+}
+.p1 img{
+    
+    width: 100%; 
+    
+}
+.btn{
+     position: absolute;       /* position on top of the image */
+    bottom: 20px;             /* distance from the bottom */
+    left: 50%;                /* center horizontally */
+    transform: translateX(-50%);
+    padding: 10px 25px;
+    background: white;
+    border: 1px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: large;
+}
+.btn:hover{
+    background-color: #000;
+    color: white;
+     transition: all 0.9s ease;
+}
+
+.shop{
+    text-align: center;
+    margin-top: 4%;
+    width: 100%;
+}
+
+/* NEXT */
+
+/* Body/Default Settings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Main Dabba: Images ko side-by-side rakhta hai aur space deta hai */
+.parent {
+    display: flex;         /* Dono items ko side-by-side kar do */
+    gap: 20px;             /* Dono pictures ke beech mein 20px ka gap do */
+    
+    width: 90%;            /* Screen ki sirf 90% jagah use karo */
+    margin: 40px auto;     /* Upar aur Neeche 40px jagah chhod do, aur centre mein rakh do */
+    max-width: 1400px;     /* Badi screens par zyada na phailne dein */
+}
+
+/* Har Picture ka Dabba: Barabar size aur button ki setting */
+.pic1, .pic2 {
+    flex: 1;               /* Dono dabbo ko barabar (50-50%) jagah do */
+    position: relative;    /* Button ki jagah is dabe ke hisaab se set hogi */
+    overflow: hidden;
+}
+
+/* Picture File ki Sizing */
+.pic1 img, .pic2 img {
+    width: 100%;           /* Apne dabe ki puri width le lo */
+    height: 100%;          /* Apne dabe ki puri height le lo */
+    object-fit: cover;     /* Agar size match na ho to zoom karke poora fill karo */
+    display: block;
+     transform: scale(1.05);
+  transition: transform 5s ease, translate 5s ease;
+
+}
+/* transition on pics */
+.pic1:hover img {
+  /* slight scale + translate to create drift */
+  transform: scale(1.08) translate(-4%, -4%);
+}
+.pic2:hover img {
+  /* slight scale + translate to create drift */
+  transform: scale(1.08) translate(-4%, -4%);
+}
+
+/* Button ki Jagah aur Style */
+.btn1, .btn2 {
+    position: absolute; 
+    width: 150px;   /* Picture ke upar adjust ho jao */
+    bottom: 5%;            /* Neeche se thoda upar (5%) */
+    left: 50%;             /* Left side se 50% par */
+    transform: translateX(-50%); /* Bilkul center mein adjust ho jao */
+    
+    /* Button ka dikhna */
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Jab mouse button par aaye */
+.btn1:hover, .btn2:hover {
+    background-color: #333;
+    color: white;
+    transition: all 0.9s ease;
+}
+
+/* parent2 */
+
+.parent2 {
+    display: flex;         /* Teeno items ko side-by-side kar do */
+    gap: 20px;             /* Teeno pictures ke beech mein 20px ka gap do */
+    
+    width: 90%;            /* Screen ki sirf 90% jagah use karo */
+    margin: 40px auto;     /* Upar aur Neeche 40px jagah chhod do, aur centre mein rakh do */
+    max-width: 1400px;     /* Badi screens par zyada na phailne dein */
+}
+
+/* Har Picture ka Dabba: Barabar size aur button ki setting */
+.ppic1, .ppic2, .ppic3 {
+    flex: 1;               /* Teeno dabbo ko barabar (roughly 33.33%) jagah do */
+    position: relative;    /* Button ki jagah is dabe ke hisaab se set hogi */
+    overflow: hidden;
+}
+
+/* Picture File ki Sizing */
+.ppic1 img, .ppic2 img, .ppic3 img {
+    width: 100%;           /* Apne dabe ki puri width le lo */
+    height: 100%;          /* Apne dabe ki puri height le lo */
+    object-fit: cover;     /* Agar size match na ho to zoom karke poora fill karo */
+    display: block;
+     transform: scale(1.05);
+  transition: transform 5s ease, translate 5s ease;
+
+}
+/* transition on pics */
+
+.ppic1:hover img{
+     transform: scale(1.08) translate(-4%, -4%);
+}
+.ppic2:hover img{
+     transform: scale(1.08) translate(-4%, -4%);
+}
+.ppic3:hover img{
+     transform: scale(1.08) translate(-4%, -4%);
+}
+
+/* Button ki Jagah aur Style */
+.bbtn1, .bbtn2, .bbtn3 {
+    position: absolute;    /* Picture ke upar adjust ho jao */
+    bottom: 5%;            /* Neeche se thoda upar (5%) */
+    left: 50%;             /* Left side se 50% par */
+    transform: translateX(-50%); /* Bilkul center mein adjust ho jao */
+    
+    /* Button ka dikhna */
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Jab mouse button par aaye */
+.bbtn1:hover, .bbtn2:hover, .bbtn3:hover {
+    background-color: #333;
+    color: white;
+    transition: all 0.9s ease;
+}
+/* FOOTER */
+.fotter{
+    text-align: center;
+    margin-top: 5%;
+}
+.subscribe-section{      /* outer wrapper */
+    display:flex;
+    justify-content:center;   /* horizontal center */
+    align-items:center;       /* vertical center (agar height set ho) */
+    height:200px;             /* sirf demo ke liye */
+}
+.subscribe-box{
+   display:flex;          /* input + button sath sath */
+}
+
+.email-input{
+   padding:10px;
+   border:1px solid #ccc;
+   outline:none;
+}
+
+.btn-subscribe{
+   background:#000;
+   color:#fff;
+   padding:0 20px;
+   border:none;
+   cursor:pointer;
+   transition:all 0.3s ease;
+}
+
+.btn-subscribe:hover{     /* same hover effect jese uper wale btns */
+   background: white;
+   color: #000;
+}
+
+
+
+
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f2f2;
+}
+
+.site-footer{
+    background:#222;
+    color:#fff;
+    padding:60px 40px;          /* more padding like baroque */
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between; /* equal space between columns */
+    max-width:1200px;             /* center content inside */
+    margin:0 auto;                /* horizontally center container */
+    gap:60px; 
+    margin-left: 20px; 
+    margin-right: 20px;                    /* equal gap if screen wide */
+}
+
+.footer-col3{
+    flex:1;                         /* equal width columns */
+    min-width:220px;
+    text-align:left;
+                     /* left/justify text */
+}
+
+.footer-col h4{
+    font-size:20px;                 /* bigger heading */
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+
+.footer-col ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-col ul li{
+    margin:12px 0;
+    font-size:16px;                 /* bigger text */
+}
+
+.footer-col ul li a{
+    color:#ccc;
+    text-decoration:none;
+    transition:color 0.3s;
+}
+
+.footer-col ul li a:hover{
+    color:#fff;
+}
+
+.nav{
+     width: 100%;
+    position: sticky;
+    top: 70px;
+    /* margin-top: 0px; */
+    /* left: 0; */
+    background-color: rgb(255, 255, 255);
+   font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+     margin-top: 40px ;
+     cursor: pointer;
+     margin-top: 30px;
+     padding-top: 30px;
+
+}
+
+
+
+/* side bar and images */
+/* Basic Reset and Typography */
+
+/* Main Layout: Filters aur Grid ko side-by-side rakhne ke liye */
+.main-content-container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Left Sidebar (Filters) Area */
+.sidebar-container {
+    width: 25vw; /* Total width ka 25% */
+    padding-right: 20px;
+}
+
+/* Right Product Grid Area */
+.product-grid {
+    width: 75vw; /* Total width ka 75% */
+    display: grid;
+    /* 4 columns (jaisa video mein dikh raha hai) */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; /* Products ke beech ka space */
+}
+
+/* Product Image Sizing aur Classes */
+.product-item {
+    /* Yahan pe aapki b1 se b11 classes aayengi, lekin unhe alag se style karne ki zaroorat nahi hai 
+       agar aap sirf layout chahte hain. */
+    overflow: hidden;
+    /* Images ka aspect ratio maintain karne ke liye */
+    aspect-ratio: 0.7; 
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    /* Image ko box ke andar fit aur cover karne ke liye */
+    object-fit: cover; 
+    display: block;
+}
+
+/* Filter Box Styling */
+.filter-box {
+    width: 100%;
+    padding: 0;
+}
+
+.filter-item {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsive Design (Agar screen choti ho) */
+@media (max-width: 1024px) {
+    /* Medium screens par 3-column grid */
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile screens par 2-column grid aur sidebar ko neeche bhej denge */
+    .main-content-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar-container {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+        position: static !important; /* Sticky hata denge mobile par */
+    }
+
+    .product-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Sticky Sidebar CSS */
+
+.sidebar-container {
+    /* ... pehle wala code ... */
+    /* Sticky effect ke liye zaroori property */
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    
+    /* Jab scroll ho kar yahan pahunche, to screen ke top se 20px neeche chipak jaye */
+    top: 20px; 
+    align-self: flex-start; /* Ye zaroori hai flex container mein sticky kaam karane ke liye */
+    top: 148px;
+}
+.filter-item {
+    /* 1. Font Size Increase */
+    font-size: 20px; /* 14px se badhakar 16px kar diya */
+    font-weight: bold;
+    
+    /* 2. Layout */
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    /* 3. Spacing (Up, Down, aur Line ke liye) */
+    padding: 10px 0; /* Text ke upar aur neeche thodi jagah */
+    margin-bottom: 5px; /* Agle item se halki si doori */
+    
+    /* 4. Separating Line (Jaisa Video mein dikh raha hai) */
+    /* Har item ke neeche ek light grey line add kar di */
+    border-bottom: 1px solid #ddd; 
+}
+
+
+
+
